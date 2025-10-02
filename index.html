@@ -16,7 +16,7 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* bg-slate-50 */
+            background-color: #f8fafc;
         }
         .slide {
             min-height: 100vh;
@@ -24,8 +24,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
-            border-bottom: 1px solid #e2e8f0; /* border-slate-200 */
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
             position: relative;
         }
         .chart-container {
@@ -59,12 +59,6 @@
             max-height: 80vh;
             overflow-y: auto;
         }
-        .icon {
-            font-size: 3.75rem; /* text-6xl */
-            line-height: 1;
-            color: #00552B;
-            margin-bottom: 1rem;
-        }
         .nav-arrow {
             position: absolute;
             bottom: 2rem;
@@ -74,12 +68,12 @@
             gap: 1rem;
         }
         .arrow-link {
-            color: #94a3b8; /* slate-400 */
-            font-size: 1.875rem; /* text-3xl */
+            color: #94a3b8;
+            font-size: 1.875rem;
             transition: color 0.3s;
         }
         .arrow-link:hover {
-            color: #1e293b; /* slate-800 */
+            color: #1e293b;
         }
         .viability-btn {
             transition: all 0.3s ease;
@@ -90,6 +84,25 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 3rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #4CAF50;
+            border-radius: 2px;
+        }
+        .payback-ruler-marker {
+            transition: left 0.5s ease-in-out;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -98,10 +111,9 @@
 
         <header class="slide bg-white">
             <div class="text-center">
-                <span class="icon">🎓</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-[#00552B] mt-4 mb-2 gradient-text">Escola SESI Jardins</h1>
-                <p class="text-xl md:text-2xl text-gray-600">Uma Escola para o Futuro em Goiás</p>
-                <p class="max-w-3xl mx-auto mt-4 text-base text-gray-500">Um passo estratégico para expandir o acesso à educação de ponta, preparar jovens para as profissões do futuro e fortalecer a indústria e a comunidade em Goiás.</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-[#00552B] mt-4 mb-2 gradient-text">Escola SESI Jardins</h1>
+                <p class="text-2xl md:text-3xl text-gray-600">Uma Escola para o Futuro em Goiás</p>
+                <p class="max-w-3xl mx-auto mt-6 text-base text-gray-500">Um passo estratégico para expandir o acesso à educação de ponta, preparar jovens para as profissões do futuro e fortalecer a indústria e a comunidade em Goiás.</p>
             </div>
             <div class="absolute bottom-24 left-1/2 -translate-x-1/2">
                 <img src="https://i.postimg.cc/W3V6sPZD/sesi-fieg.png" alt="Logomarca SESI FIEG" class="h-12">
@@ -113,7 +125,7 @@
 
         <section id="fundamentacao" class="slide bg-slate-50">
             <div class="text-center max-w-4xl">
-                 <h2 class="text-3xl font-bold text-center text-[#00552B] mb-6">Fundamentação do Projeto</h2>
+                 <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Fundamentação do Projeto</h2>
                 <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                     <p class="text-base text-gray-700 leading-relaxed">
                         Este infográfico consolida os principais resultados de um abrangente conjunto de estudos quantitativos e qualitativos, realizados para subsidiar o projeto de construção da Escola SESI Jardins. As análises apresentadas derivam de múltiplas fontes, incluindo o estudo interno do projeto, as pesquisas qualitativas da DSI e Checon Pesquisa, a pesquisa de viabilidade da Gerência de Educação Básica do SESI Goiás, e os levantamentos de mercado do Procon (2025) e de desempenho do ENEM (2024). O material reflete o panorama e as projeções que fundamentaram o cronograma de execução, planejado entre maio de 2023 e dezembro de 2025, oferecendo uma visão estratégica sobre a necessidade, o escopo e o impacto esperado da nova unidade.
@@ -130,10 +142,11 @@
             <section id="necessidade" class="slide bg-white">
                 <div class="text-center w-full max-w-5xl mx-auto">
                     <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Construção Escola SESI Jardins - Projeto Interno</p>
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">A Necessidade Estratégica da Nova Escola</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">A Necessidade Estratégica</h2>
+                    <p class="text-base text-gray-700 max-w-4xl mx-auto mb-10">Esta seção detalha a justificativa fundamental para a criação da nova escola, analisando a crescente demanda educacional na região e o alinhamento estratégico do projeto com as necessidades da indústria goiana.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full transition-transform duration-300 hover:scale-105 flex flex-col">
-                            <h3 class="text-xl font-bold text-[#00796B] mb-3 text-center flex items-center justify-center"><span class="text-3xl mr-3">📈</span>Atendimento à Crescente Demanda</h3>
+                            <h3 class="text-xl font-bold text-[#00796B] mb-3 text-center">Atendimento à Crescente Demanda</h3>
                             <p class="text-gray-600 mb-4 text-center">A região demonstra uma clara busca por novos modelos de aprendizagem, com as escolas existentes operando acima da capacidade.</p>
                             <div class="chart-container h-64 md:h-72">
                                 <canvas id="demandaChart"></canvas>
@@ -143,7 +156,7 @@
                             <button class="analysis-button mt-auto w-full bg-green-100 text-green-800 font-bold py-2 px-4 rounded-lg hover:bg-green-200 transition duration-300" data-analysis-key="demanda">Análise Detalhada</button>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full transition-transform duration-300 hover:scale-105 flex flex-col">
-                            <h3 class="text-xl font-bold text-[#FB8C00] mb-3 text-center flex items-center justify-center"><span class="text-3xl mr-3">⚙️</span>Apoio Direto à Indústria</h3>
+                            <h3 class="text-xl font-bold text-[#FB8C00] mb-3 text-center">Apoio Direto à Indústria</h3>
                             <p class="text-gray-600 mb-4 text-center">O projeto foi desenhado para atender diretamente os dependentes dos colaboradores, o principal ativo da indústria goiana.</p>
                             <div class="chart-container h-64 md:h-72">
                                 <canvas id="industriaChart"></canvas>
@@ -162,23 +175,20 @@
 
             <section id="pedagogia" class="slide bg-slate-50">
                  <div class="text-center w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-4">Proposta Pedagógica Inovadora</h2>
-                    <p class="text-center text-gray-600 mb-12">O aluno como protagonista através da abordagem STEAM: investigar, descobrir, conectar, criar e refletir.</p>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Proposta Pedagógica Inovadora</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">O coração do projeto é sua abordagem pedagógica. Aqui, exploramos os três pilares que sustentam um ensino focado em preparar os alunos para o futuro: a pedagogia ativa, o uso de tecnologias avançadas e o acesso a iniciativas educacionais de renome.</p>
                     <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                             <div class="flex flex-col items-center p-4">
-                                <span class="icon">🧠</span>
-                                <h4 class="text-lg font-bold text-[#00552B]">Pedagogia Ativa</h4>
+                                <h4 class="text-xl font-bold text-[#00552B] mb-2">Pedagogia Ativa</h4>
                                 <p class="text-gray-600 text-sm">Ensino autoral e alinhado à BNCC, que torna o aprendizado relevante, prático e profundamente engajador para os desafios reais.</p>
                             </div>
                             <div class="flex flex-col items-center p-4">
-                                <span class="icon">💻</span>
-                                <h4 class="text-lg font-bold text-[#00552B]">Tecnologias Avançadas</h4>
+                                <h4 class="text-xl font-bold text-[#00552B] mb-2">Tecnologias Avançadas</h4>
                                 <p class="text-gray-600 text-sm">Infraestrutura pronta para a Indústria 4.0 e 5G, desenvolvendo as competências digitais que o futuro exigirá.</p>
                             </div>
                             <div class="flex flex-col items-center p-4">
-                                <span class="icon">🏆</span>
-                                <h4 class="text-lg font-bold text-[#00552B]">Iniciativas Nacionais</h4>
+                                <h4 class="text-xl font-bold text-[#00552B] mb-2">Iniciativas Nacionais</h4>
                                 <p class="text-gray-600 text-sm">Acesso a programas de renome como F1 in Schools e FIRST LEGO League, conectando a teoria à prática competitiva.</p>
                             </div>
                         </div>
@@ -192,7 +202,8 @@
 
             <section id="numeros" class="slide bg-white">
                 <div class="text-center w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">O Projeto em Números</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">O Projeto em Números</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Para tangibilizar a grandiosidade do projeto, esta seção apresenta os principais números que definem sua estrutura, capacidade e o investimento total, detalhando a alocação de recursos.</p>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-12">
                         <div class="bg-slate-100 p-6 rounded-xl shadow-md transition-transform duration-300 hover:scale-105"><p class="text-4xl font-extrabold text-[#4CAF50]">1.900</p><p class="text-gray-500">Capacidade de Alunos</p></div>
                         <div class="bg-slate-100 p-6 rounded-xl shadow-md transition-transform duration-300 hover:scale-105"><p class="text-4xl font-extrabold text-[#4CAF50]">29.585 m²</p><p class="text-gray-500">Área Construída</p></div>
@@ -218,7 +229,8 @@
             
             <section id="cronograma" class="slide bg-slate-50">
                 <div class="w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">Cronograma de Execução</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Cronograma de Execução</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Um projeto desta magnitude exige um planejamento rigoroso. A linha do tempo a seguir detalha as principais fases de execução, desde a pré-operação até a conclusão, oferecendo uma visão clara do caminho a ser percorrido.</p>
                     <div class="relative wrap overflow-hidden p-10 h-full">
                         <div class="absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
                         <div class="mb-8 flex justify-between items-center w-full right-timeline">
@@ -251,16 +263,16 @@
             
             <section id="impacto" class="slide bg-green-700 text-white">
                 <div class="text-center w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center mb-12">Impacto Transformador para Goiás</h2>
+                    <h2 class="text-4xl font-bold text-center section-title" style="margin-bottom: 3rem;">Impacto Transformador</h2>
+                     <style>#impacto .section-title::after { background-color: #fff; }</style>
+                     <p class="text-center text-green-100 mb-12 max-w-3xl mx-auto">Além dos muros da escola, o projeto visa gerar um legado duradouro. Analisamos aqui o impacto positivo esperado tanto para o fortalecimento da indústria goiana quanto para o desenvolvimento da comunidade local.</p>
                     <div class="flex flex-col md:flex-row justify-center items-center gap-8">
                         <div class="max-w-md">
-                            <span class="icon text-white">🏭</span>
                             <h3 class="text-2xl font-bold mt-2 mb-2">Para a Indústria Goiana</h3>
                             <p class="text-green-100">Formação de profissionais e empreendedores com as competências exigidas pelo mercado, impulsionando a produtividade, a inovação e o futuro industrial do estado.</p>
                         </div>
                         <div class="border-t-2 md:border-t-0 md:border-l-2 border-green-500 h-16 md:h-32 w-full md:w-auto"></div>
                         <div class="max-w-md">
-                            <span class="icon text-white">❤️</span>
                             <h3 class="text-2xl font-bold mt-2 mb-2">Para a Sociedade</h3>
                             <p class="text-green-100">Educação inclusiva e de alta qualidade, fortalecimento dos laços comunitários e um legado social positivo e duradouro através de um ambiente seguro e acolhedor.</p>
                         </div>
@@ -275,10 +287,11 @@
             <section id="pesquisa-dsi" class="slide bg-white">
                 <div class="text-center w-full max-w-5xl mx-auto">
                     <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Pesquisa Qualitativa - DSI</p>
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">O Que Pais e Alunos Realmente Valorizam?</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">O Que Pais e Alunos Valorizam?</h2>
+                    <p class="text-base text-gray-700 max-w-4xl mx-auto mb-10">Para entender o público-alvo, a pesquisa qualitativa da DSI ouviu pais e alunos, investigando suas percepções sobre o ambiente escolar. Os gráficos a seguir revelam o que eles mais aprovam e desaprovam nas escolas atuais, fornecendo insights valiosos sobre suas expectativas.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full transition-transform duration-300 hover:scale-105 flex flex-col">
-                            <h3 class="text-xl font-bold text-[#00796B] mb-3 text-center flex items-center justify-center"><span class="text-3xl mr-3">👍</span>O Que Mais Gostam nas Escolas Atuais</h3>
+                            <h3 class="text-xl font-bold text-[#00796B] mb-3 text-center">O Que Mais Gostam nas Escolas Atuais</h3>
                             <p class="text-gray-600 mb-4 text-center">Pais buscam acolhimento e clareza, enquanto alunos valorizam a estrutura física e o suporte acadêmico.</p>
                             <div class="chart-container h-64 md:h-72">
                                 <canvas id="aprovamChart"></canvas>
@@ -288,7 +301,7 @@
                             <button class="analysis-button mt-auto w-full bg-green-100 text-green-800 font-bold py-2 px-4 rounded-lg hover:bg-green-200 transition duration-300" data-analysis-key="aprovam">Análise Detalhada</button>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full transition-transform duration-300 hover:scale-105 flex flex-col">
-                            <h3 class="text-xl font-bold text-[#D32F2F] mb-3 text-center flex items-center justify-center"><span class="text-3xl mr-3">👎</span>O Que Menos Gostam nas Escolas Atuais</h3>
+                            <h3 class="text-xl font-bold text-[#D32F2F] mb-3 text-center">O Que Menos Gostam nas Escolas Atuais</h3>
                             <p class="text-gray-600 mb-4 text-center">A principal frustração dos pais é a desorganização administrativa. Alunos se sentem confinados em espaços pequenos.</p>
                             <div class="chart-container h-64 md:h-72">
                                 <canvas id="desaprovamChart"></canvas>
@@ -308,10 +321,11 @@
             <section id="pesquisa-checon" class="slide bg-slate-50">
                  <div class="text-center w-full max-w-5xl mx-auto">
                     <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Pesquisa Qualitativa - Checon Pesquisa</p>
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">Percepção da Marca e Fatores de Decisão</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Percepção da Marca e Decisão</h2>
+                    <p class="text-base text-gray-700 max-w-4xl mx-auto mb-10">A pesquisa da Checon aprofunda o entendimento do mercado, analisando a percepção da marca SESI em Goiânia e os principais fatores que influenciam a decisão das famílias na escolha de uma escola. Os resultados mostram tanto as oportunidades quanto os desafios de posicionamento.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full transition-transform duration-300 hover:scale-105 flex flex-col">
-                            <h3 class="text-xl font-bold text-[#00796B] mb-3 text-center flex items-center justify-center"><span class="text-3xl mr-3">📍</span>Percepção da Marca SESI</h3>
+                            <h3 class="text-xl font-bold text-[#00796B] mb-3 text-center">Percepção da Marca SESI</h3>
                             <p class="text-gray-600 mb-4 text-center">O SESI é uma marca conhecida e com imagem positiva, mas associada ao passado e a um público diferente do alvo.</p>
                             <div class="space-y-4">
                                 <div class="p-4 bg-blue-50 rounded-lg"><strong class="text-blue-800">Forças:</strong> Marca conhecida e com imagem positiva, associada a lazer, cultura e qualidade.</div>
@@ -324,7 +338,7 @@
                             <button class="analysis-button mt-auto w-full bg-blue-100 text-blue-800 font-bold py-2 px-4 rounded-lg hover:bg-blue-200 transition duration-300" data-analysis-key="marca">Análise Detalhada</button>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full transition-transform duration-300 hover:scale-105 flex flex-col">
-                            <h3 class="text-xl font-bold text-[#FB8C00] mb-3 text-center flex items-center justify-center"><span class="text-3xl mr-3">🎯</span>Principais Fatores na Escolha da Escola</h3>
+                            <h3 class="text-xl font-bold text-[#FB8C00] mb-3 text-center">Principais Fatores na Escolha da Escola</h3>
                             <p class="text-gray-600 mb-4 text-center">Apesar de mencionarem a pedagogia, os fatores pragmáticos como localização e o foco em resultados (vestibular) ainda dominam a decisão.</p>
                             <div class="chart-container h-64 md:h-72">
                                 <canvas id="fatoresEscolhaChart"></canvas>
@@ -343,7 +357,8 @@
             
             <section id="cruzamento-ideal" class="slide bg-white">
                  <div class="text-center w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">Visão Cruzada: O Perfil da Escola Ideal</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Visão Cruzada: O Perfil da Escola Ideal</h2>
+                     <p class="text-base text-gray-700 max-w-4xl mx-auto mb-10">Ao cruzar os dados das pesquisas qualitativas, obtemos uma visão mais rica do cenário. Esta seção compara as prioridades de pais e alunos para definir o perfil da 'escola ideal' e analisa as forças que impulsionam ou dificultam a migração de alunos entre escolas.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 h-full flex flex-col">
                              <h3 class="text-xl font-bold text-center mb-4">Prioridades dos Pais</h3>
@@ -372,25 +387,26 @@
             
             <section id="cruzamento-migracao" class="slide bg-slate-50">
                 <div class="text-center w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">Visão Cruzada: Fatores de Migração</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Visão Cruzada: Fatores de Migração</h2>
+                    <p class="text-base text-gray-700 max-w-4xl mx-auto mb-10">Entender o que motiva uma família a mudar de escola é crucial. Esta análise contrasta as principais barreiras que geram hesitação com os fatores de atração que podem impulsionar a matrícula na nova unidade.</p>
                     <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                              <div class="text-center">
-                                <h3 class="text-2xl font-bold text-red-600 mb-4 flex items-center justify-center"><span class="text-4xl mr-3">🚧</span>Barreiras à Mudança</h3>
+                                <h3 class="text-2xl font-bold text-red-600 mb-4">Barreiras à Mudança</h3>
                                 <ul class="space-y-3 text-left">
-                                    <li class="flex items-start"><span class="text-red-500 mr-2">●</span><strong>Insegurança com o Novo:</strong> Receio de trocar uma metodologia "tradicional" e comprovada por propostas como Maker/STEAM sem referências de sucesso.</li>
-                                    <li class="flex items-start"><span class="text-red-500 mr-2">●</span><strong>Foco no Vestibular:</strong> A principal métrica de sucesso para os pais ainda é a aprovação em universidades, gerando dúvida se um modelo inovador cumprirá essa meta.</li>
-                                    <li class="flex items-start"><span class="text-red-500 mr-2">●</span><strong>Percepção da Marca SESI:</strong> Associação da marca com ensino técnico e um público de perfil socioeconômico diferente do alvo.</li>
-                                     <li class="flex items-start"><span class="text-red-500 mr-2">●</span><strong>Custo da Mudança:</strong> O "trauma" de mudar de escola, especialmente para alunos já adaptados ou em séries mais avançadas do Ensino Médio.</li>
+                                    <li class="flex items-start"><span class="text-red-500 mr-2 font-bold">-</span><strong>Insegurança com o Novo:</strong> Receio de trocar uma metodologia "tradicional" e comprovada por propostas como Maker/STEAM sem referências de sucesso.</li>
+                                    <li class="flex items-start"><span class="text-red-500 mr-2 font-bold">-</span><strong>Foco no Vestibular:</strong> A principal métrica de sucesso para os pais ainda é a aprovação em universidades, gerando dúvida se um modelo inovador cumprirá essa meta.</li>
+                                    <li class="flex items-start"><span class="text-red-500 mr-2 font-bold">-</span><strong>Percepção da Marca SESI:</strong> Associação da marca com ensino técnico e um público de perfil socioeconômico diferente do alvo.</li>
+                                     <li class="flex items-start"><span class="text-red-500 mr-2 font-bold">-</span><strong>Custo da Mudança:</strong> O "trauma" de mudar de escola, especialmente para alunos já adaptados ou em séries mais avançadas do Ensino Médio.</li>
                                 </ul>
                             </div>
                              <div class="text-center">
-                                <h3 class="text-2xl font-bold text-green-600 mb-4 flex items-center justify-center"><span class="text-4xl mr-3">🚀</span>Atratores da Nova Escola</h3>
+                                <h3 class="text-2xl font-bold text-green-600 mb-4">Atratores da Nova Escola</h3>
                                 <ul class="space-y-3 text-left">
-                                    <li class="flex items-start"><span class="text-green-500 mr-2">●</span><strong>Localização Estratégica:</strong> A conveniência de uma escola de alto padrão na região dos Jardins é um fator de atração poderoso, capaz de superar a inércia.</li>
-                                     <li class="flex items-start"><span class="text-green-500 mr-2">●</span><strong>Infraestrutura Superior:</strong> O "fator uau" do projeto arquitetônico, com espaços amplos e modernos, atende diretamente a uma grande insatisfação dos alunos.</li>
-                                     <li class="flex items-start"><span class="text-green-500 mr-2">●</span><strong>Proposta de Inovação:</strong> Embora não seja o fator principal, a oferta de ensino Maker, robótica e esportes é vista como um diferencial atrativo, especialmente se bem comunicada.</li>
-                                     <li class="flex items-start"><span class="text-green-500 mr-2">●</span><strong>Força da Marca SESI:</strong> Para muitos, o nome SESI transmite credibilidade, solidez e potencial de investimento, funcionando como um selo de qualidade.</li>
+                                    <li class="flex items-start"><span class="text-green-500 mr-2 font-bold">+</span><strong>Localização Estratégica:</strong> A conveniência de uma escola de alto padrão na região dos Jardins é um fator de atração poderoso, capaz de superar a inércia.</li>
+                                     <li class="flex items-start"><span class="text-green-500 mr-2 font-bold">+</span><strong>Infraestrutura Superior:</strong> O "fator uau" do projeto arquitetônico, com espaços amplos e modernos, atende diretamente a uma grande insatisfação dos alunos.</li>
+                                     <li class="flex items-start"><span class="text-green-500 mr-2 font-bold">+</span><strong>Proposta de Inovação:</strong> Embora não seja o fator principal, a oferta de ensino Maker, robótica e esportes é vista como um diferencial atrativo, especialmente se bem comunicada.</li>
+                                     <li class="flex items-start"><span class="text-green-500 mr-2 font-bold">+</span><strong>Força da Marca SESI:</strong> Para muitos, o nome SESI transmite credibilidade, solidez e potencial de investimento, funcionando como um selo de qualidade.</li>
                                 </ul>
                             </div>
                         </div>
@@ -409,7 +425,8 @@
             
              <section id="correlacao-enem" class="slide bg-white">
                 <div class="text-center w-full max-w-5xl mx-auto">
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-12">Correlação: Mensalidade vs. Desempenho ENEM</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Correlação: Mensalidade vs. ENEM</h2>
+                    <p class="text-base text-gray-700 max-w-4xl mx-auto mb-10">Nesta análise, cruzamos dados de mercado para visualizar a relação entre o custo da mensalidade e o desempenho no ENEM em Goiânia. O gráfico posiciona as principais escolas e projeta onde a Escola SESI Jardins se encaixará nesse panorama competitivo.</p>
                      <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex flex-col">
                         <div class="chart-container scatter-chart-container">
                             <canvas id="enemScatterChart"></canvas>
@@ -428,16 +445,16 @@
             <section id="viabilidade-projeto" class="slide bg-slate-50">
                  <div class="text-center w-full max-w-6xl mx-auto">
                     <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Análise do Projeto de Viabilidade</p>
-                    <h2 class="text-4xl font-bold text-center text-[#00552B] mb-4">A Lógica Financeira da Escola SESI Jardins</h2>
+                    <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">A Lógica Financeira do Projeto</h2>
                     <p class="text-base text-gray-700 max-w-4xl mx-auto mb-8">
                         Apresentamos a seguir a análise de viabilidade do projeto, elaborada pelo Gerente de Educação Básica do SESI Goiás, Diego Freire. Este estudo, de natureza conservadora, fundamenta as projeções financeiras do projeto, partindo da capacidade produtiva da escola para estimar custos, matrículas e receitas, garantindo uma visão clara da sustentabilidade e do potencial de retorno do investimento.
                     </p>
                     
                      <div id="viability-nav" class="flex flex-wrap justify-center gap-4 mb-8">
-                        <button data-content="sintese" class="viability-btn active bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg shadow-md flex items-center gap-2"> <span class="text-2xl">💡</span> Síntese</button>
-                        <button data-content="capacidade" class="viability-btn bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg shadow-md flex items-center gap-2"><span class="text-2xl">👥</span> Capacidade</button>
-                        <button data-content="custos" class="viability-btn bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg shadow-md flex items-center gap-2"><span class="text-2xl">💰</span> Custos</button>
-                        <button data-content="receitas" class="viability-btn bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg shadow-md flex items-center gap-2"><span class="text-2xl">📊</span> Receitas</button>
+                        <button data-content="sintese" class="viability-btn active bg-slate-200 text-slate-800 font-bold py-3 px-6 rounded-lg shadow-md">Síntese</button>
+                        <button data-content="capacidade" class="viability-btn bg-slate-200 text-slate-800 font-bold py-3 px-6 rounded-lg shadow-md">Capacidade</button>
+                        <button data-content="custos" class="viability-btn bg-slate-200 text-slate-800 font-bold py-3 px-6 rounded-lg shadow-md">Custos</button>
+                        <button data-content="receitas" class="viability-btn bg-slate-200 text-slate-800 font-bold py-3 px-6 rounded-lg shadow-md">Projeções</button>
                     </div>
 
                     <div id="viability-content" class="w-full">
@@ -445,13 +462,13 @@
                             <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                                 <h3 class="text-2xl font-bold text-[#00552B] mb-4">A Lógica Interconectada do Planejamento</h3>
                                 <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-                                    <div class="flex-1 p-4 bg-slate-50 rounded-lg"> <span class="text-4xl">👥</span> <p class="font-bold mt-2">1. Definir a Escala</p> <p class="text-sm">A Capacidade de Alunos dita o potencial do projeto.</p></div>
+                                    <div class="flex-1 p-4 bg-slate-50 rounded-lg"> <p class="font-bold text-lg">1. Definir a Escala</p> <p class="text-sm">A Capacidade de Alunos dita o potencial do projeto.</p></div>
                                     <p class="text-2xl font-bold text-gray-400">→</p>
-                                    <div class="flex-1 p-4 bg-slate-50 rounded-lg"> <span class="text-4xl">💰</span> <p class="font-bold mt-2">2. Calcular Custos</p> <p class="text-sm">A escala define os custos operacionais e administrativos.</p></div>
+                                    <div class="flex-1 p-4 bg-slate-50 rounded-lg"> <p class="font-bold text-lg">2. Calcular Custos</p> <p class="text-sm">A escala define os custos operacionais e administrativos.</p></div>
                                      <p class="text-2xl font-bold text-gray-400">→</p>
-                                    <div class="flex-1 p-4 bg-slate-50 rounded-lg"> <span class="text-4xl">📊</span> <p class="font-bold mt-2">3. Estimar Retorno</p> <p class="text-sm">Matrículas e mensalidade projetam a receita.</p></div>
+                                    <div class="flex-1 p-4 bg-slate-50 rounded-lg"> <p class="font-bold text-lg">3. Estimar Retorno</p> <p class="text-sm">Matrículas e mensalidade projetam a receita.</p></div>
                                      <p class="text-2xl font-bold text-gray-400">→</p>
-                                    <div class="flex-1 p-4 bg-green-100 rounded-lg"> <span class="text-4xl">✅</span> <p class="font-bold mt-2">4. Veredito Final</p> <p class="text-sm">Receita vs. Custos determina a viabilidade.</p></div>
+                                    <div class="flex-1 p-4 bg-green-100 rounded-lg"> <p class="font-bold text-lg">4. Veredito Final</p> <p class="text-sm">Receita vs. Custos determina a viabilidade.</p></div>
                                 </div>
                                  <p class="text-center text-sm font-semibold text-[#00552B] mt-6 p-3 bg-green-50 rounded-lg"><strong>Insight Estratégico:</strong> A viabilidade do projeto é assegurada por uma sequência lógica onde cada etapa fundamenta a seguinte, partindo de uma projeção conservadora para garantir a sustentabilidade.</p>
                             </div>
@@ -483,10 +500,93 @@
                 </div>
                  <div class="nav-arrow">
                     <a href="#correlacao-enem" class="arrow-link">▲</a>
+                    <a href="#simulador-payback" class="arrow-link">▼</a>
+                </div>
+            </section>
+            
+            <section id="simulador-payback" class="slide bg-slate-50">
+                <div class="w-full max-w-5xl mx-auto text-center">
+                     <h2 class="text-4xl font-bold text-center text-[#00552B] section-title">Simulador de Payback</h2>
+                     <p class="text-base text-gray-700 max-w-3xl mx-auto mb-10">
+                        Esta ferramenta interativa permite simular o tempo de retorno do investimento com base nas premissas do Estudo de Viabilidade. Altere as variáveis-chave para explorar diferentes cenários financeiros e visualizar o impacto de cada ajuste na trajetória de sustentabilidade do projeto.
+                     </p>
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-lg">
+                             <div class="space-y-4 text-left">
+                                <div>
+                                    <label for="investimento" class="block text-sm font-medium text-gray-700 mb-1">Investimento Inicial Total</label>
+                                    <input type="number" id="investimento" class="w-full p-2 border border-gray-300 rounded-lg" value="131454530">
+                                </div>
+                                <div>
+                                    <label for="contrapartida" class="block text-sm font-medium text-gray-700 mb-1">Contrapartida Dept. Nacional</label>
+                                    <input type="number" id="contrapartida" class="w-full p-2 border border-gray-300 rounded-lg" value="104385068">
+                                </div>
+                                <div>
+                                    <label for="mensalidade" class="block text-sm font-medium text-gray-700 mb-1">Valor Mensalidade Média</label>
+                                    <input type="number" id="mensalidade" class="w-full p-2 border border-gray-300 rounded-lg" value="1625">
+                                </div>
+                                <div>
+                                    <label for="alunos" class="block text-sm font-medium text-gray-700 mb-1">Quantidade Média de Alunos</label>
+                                    <input type="number" id="alunos" class="w-full p-2 border border-gray-300 rounded-lg" value="1090">
+                                </div>
+                                 <div>
+                                    <label for="custoAluno" class="block text-sm font-medium text-gray-700 mb-1">Custo Médio Mensal por Aluno</label>
+                                    <input type="number" id="custoAluno" class="w-full p-2 border border-gray-300 rounded-lg" value="625">
+                                </div>
+                                <div>
+                                    <label for="tma" class="block text-sm font-medium text-gray-700 mb-1">Taxa Mínima de Atratividade (TMA) % ao ano</label>
+                                    <input type="number" id="tma" class="w-full p-2 border border-gray-300 rounded-lg" value="10">
+                                    <p class="text-xs text-gray-500 mt-1">A TMA é o retorno mínimo esperado do investimento, usada para descontar os lucros futuros.</p>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 text-left shadow-lg">
+                            <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">Resultado da Simulação</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center bg-white p-3 rounded-lg">
+                                    <span class="font-semibold text-gray-600">Receita Anual Bruta:</span>
+                                    <span id="receita-anual" class="font-bold text-lg text-blue-900">R$ 0</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-white p-3 rounded-lg">
+                                    <span class="font-semibold text-gray-600">Custo Operacional Anual:</span>
+                                    <span id="custo-anual" class="font-bold text-lg text-blue-900">R$ 0</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-blue-100 p-4 rounded-lg">
+                                    <span class="font-bold text-blue-900">Lucro Operacional Anual:</span>
+                                    <span id="lucro-anual" class="font-extrabold text-xl text-blue-900">R$ 0</span>
+                                </div>
+                                <div class="flex justify-between items-center bg-blue-100 p-4 rounded-lg">
+                                    <span class="font-bold text-blue-900">VPL (10 Anos):</span>
+                                    <span id="vpl-resultado" class="font-extrabold text-xl text-blue-900">R$ 0</span>
+                                </div>
+                                <p class="text-xs text-gray-500 px-4">O VPL traz os lucros futuros para o valor presente. Se for positivo, o projeto é viável.</p>
+                            </div>
+                            <div class="text-center mt-8">
+                                <p class="text-gray-600 font-semibold">Tempo estimado para Payback</p>
+                                <p id="payback-anos" class="text-6xl font-extrabold text-blue-800 my-2">0</p>
+                                <p class="text-gray-600 font-semibold">anos</p>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="w-full mt-10 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                        <h4 class="text-lg font-bold text-center mb-2">Análise Interativa</h4>
+                        <p id="analise-interativa" class="text-center text-sm text-gray-600 max-w-3xl mx-auto"></p>
+                        <h4 class="text-lg font-bold text-center mb-4 mt-6">Régua de Payback (Anos)</h4>
+                         <div class="relative h-4 bg-slate-200 rounded-full w-full">
+                            <div id="payback-marker" class="payback-ruler-marker absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-green-500 rounded-full border-4 border-white shadow-lg" style="left: 0%;">
+                                <div id="payback-label" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs font-bold bg-gray-800 text-white px-2 py-1 rounded-md whitespace-nowrap opacity-0 transition-opacity"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between text-xs mt-2 font-semibold text-gray-500">
+                            <span>0</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25+</span>
+                        </div>
+                     </div>
+                </div>
+                 <div class="nav-arrow">
+                    <a href="#viabilidade-projeto" class="arrow-link">▲</a>
                     <a href="#footer" class="arrow-link">▼</a>
                 </div>
             </section>
-
         </main>
 
         <footer id="footer" class="text-center py-8 bg-slate-200 relative">
@@ -511,38 +611,49 @@
     </div>
 
     <script>
-        Chart.register(ChartDataLabels);
-
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            } else {
-                return label;
-            }
-        };
-
-        const wrapLabel = (label) => {
-            const maxLength = 16;
-            if (label.length <= maxLength) return label;
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + word).length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
-                }
-                currentLine += word + ' ';
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        };
-
         document.addEventListener("DOMContentLoaded", function() {
-            const demandaCtx = document.getElementById('demandaChart').getContext('2d');
-            new Chart(demandaCtx, {
+            Chart.register(ChartDataLabels);
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const charts = {};
+
+            function wrapLabel(label) {
+                const maxLength = 16;
+                if (label.length <= maxLength) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            }
+
+            function createChart(id, config) {
+                const ctx = document.getElementById(id)?.getContext('2d');
+                if (ctx) {
+                    if (charts[id]) {
+                        charts[id].destroy();
+                    }
+                    charts[id] = new Chart(ctx, config);
+                }
+            }
+
+            createChart('demandaChart', {
                 type: 'bar',
                 data: {
                     labels: ['Rede Privada', 'Rede Pública'],
@@ -555,25 +666,18 @@
                     }]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    indexAxis: 'y',
+                    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
                     scales: { x: { beginAtZero: true, title: { display: true, text: 'Variação (%)' } } },
                     plugins: {
                         legend: { display: false },
                         title: { display: true, text: 'Variação de Matrículas (2007-2019)' },
                         tooltip: { callbacks: { title: tooltipTitleCallback } },
-                        datalabels: {
-                            color: 'white', anchor: 'center', align: 'center',
-                            font: { weight: 'bold' },
-                            formatter: (value) => value > 0 ? `+${value}%` : `${value}%`
-                        }
+                        datalabels: { color: 'white', anchor: 'center', align: 'center', font: { weight: 'bold' }, formatter: (value) => value > 0 ? `+${value}%` : `${value}%` }
                     }
                 }
             });
 
-            const industriaCtx = document.getElementById('industriaChart').getContext('2d');
-            new Chart(industriaCtx, {
+            createChart('industriaChart', {
                 type: 'doughnut',
                 data: {
                     labels: ['Dependentes de Industriários', 'Outros Alunos'],
@@ -587,28 +691,21 @@
                     }]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '60%',
+                    responsive: true, maintainAspectRatio: false, cutout: '60%',
                     plugins: {
                         legend: { position: 'bottom' },
                         title: { display: true, text: 'Alunos Dependentes de Industriários (Est. 2024)' },
                         tooltip: { callbacks: { title: tooltipTitleCallback } },
-                        datalabels: {
-                            formatter: (value) => `${value}%`,
-                            color: (ctx) => ctx.dataIndex === 0 ? '#fff' : '#555',
-                            font: { weight: 'bold', size: 16 }
-                        }
+                        datalabels: { formatter: (value) => `${value}%`, color: (ctx) => ctx.dataIndex === 0 ? '#fff' : '#555', font: { weight: 'bold', size: 16 } }
                     }
                 }
             });
-
+            
             const originalInvestimentoLabels = ['Construção e Infraestrutura', 'Mobiliário em Geral', 'Equipamentos em Geral', 'Despesas Pré-operacionais'];
-            const investimentoCtx = document.getElementById('investimentoChart').getContext('2d');
-            new Chart(investimentoCtx, {
+            createChart('investimentoChart', {
                 type: 'bar',
                 data: {
-                    labels: originalInvestimentoLabels.map(wrapLabel),
+                    labels: originalInvestimentoLabels.map(label => wrapLabel(label)),
                     datasets: [{
                         label: 'Valor (R$)',
                         data: [98143922.80, 16382844.65, 10686616.54, 6241146.15],
@@ -618,501 +715,266 @@
                     }]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    indexAxis: 'y',
+                    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
                     scales: { x: { beginAtZero: true, ticks: { callback: (value) => `R$ ${(value / 1e6).toFixed(1)}M` } } },
                     plugins: {
                         legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                title: tooltipTitleCallback,
-                                label: (context) => `Valor: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.x)}`
-                            }
-                        },
-                        datalabels: {
-                            anchor: 'end', align: 'end', color: '#333',
-                            font: { weight: 'bold' },
-                            formatter: (value) => `R$ ${(value / 1e6).toFixed(1)}M`
-                        }
+                        tooltip: { callbacks: { title: tooltipTitleCallback, label: (context) => `Valor: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.x)}` } },
+                        datalabels: { anchor: 'end', align: 'end', color: '#333', font: { weight: 'bold' }, formatter: (value) => `R$ ${(value / 1e6).toFixed(1)}M` }
                     }
                 }
             });
-
-            // Pesquisa DSI Charts
-            const aprovamCtx = document.getElementById('aprovamChart').getContext('2d');
-            new Chart(aprovamCtx, {
+            
+            createChart('aprovamChart', {
                 type: 'bar',
                 data: {
                     labels: ['Acolhimento Individualizado', 'Espaços Abertos / Estrutura', 'Clareza nas Avaliações', 'Plantões de Dúvidas'],
-                    datasets: [
-                        {
-                            label: 'Pais',
-                            data: [10, 7, 8, 0],
-                            backgroundColor: '#4CAF50',
-                        },
-                        {
-                            label: 'Alunos',
-                            data: [0, 10, 0, 8],
-                            backgroundColor: '#81C784',
-                        }
-                    ]
+                    datasets: [{ label: 'Pais', data: [10, 7, 8, 0], backgroundColor: '#4CAF50' }, { label: 'Alunos', data: [0, 10, 0, 8], backgroundColor: '#81C784' }]
                 },
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     scales: { y: { beginAtZero: true, title: { display: true, text: 'Nível de Importância (0-10)' } } },
-                    plugins: {
-                        tooltip: { callbacks: { title: tooltipTitleCallback } },
-                        datalabels: { color: 'white', font: { weight: 'bold' },
-                            formatter: (value) => value > 0 ? value : ''
-                        }
-                    }
+                    plugins: { tooltip: { callbacks: { title: tooltipTitleCallback } }, datalabels: { color: 'white', font: { weight: 'bold' }, formatter: (value) => value > 0 ? value : '' } }
                 }
             });
 
-            const desaprovamCtx = document.getElementById('desaprovamChart').getContext('2d');
-            new Chart(desaprovamCtx, {
+            createChart('desaprovamChart', {
                 type: 'bar',
                 data: {
                     labels: ['Desorganização / Burocracia', 'Espaços Fechados / Pequenos', 'Avaliações Imprecisas', 'Atividades Repetitivas'],
-                    datasets: [
-                        {
-                            label: 'Pais',
-                            data: [10, 0, 9, 0],
-                            backgroundColor: '#D32F2F',
-                        },
-                        {
-                            label: 'Alunos',
-                            data: [0, 10, 0, 7],
-                            backgroundColor: '#E57373',
-                        }
-                    ]
+                    datasets: [{ label: 'Pais', data: [10, 0, 9, 0], backgroundColor: '#D32F2F' }, { label: 'Alunos', data: [0, 10, 0, 7], backgroundColor: '#E57373' }]
                 },
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     scales: { y: { beginAtZero: true, title: { display: true, text: 'Nível de Insatisfação (0-10)' } } },
-                    plugins: {
-                        tooltip: { callbacks: { title: tooltipTitleCallback } },
-                        datalabels: { color: 'white', font: { weight: 'bold' },
-                            formatter: (value) => value > 0 ? value : ''
-                         }
-                    }
+                    plugins: { tooltip: { callbacks: { title: tooltipTitleCallback } }, datalabels: { color: 'white', font: { weight: 'bold' }, formatter: (value) => value > 0 ? value : '' } }
                 }
             });
 
-            // Pesquisa Checon Chart
-            const fatoresEscolhaCtx = document.getElementById('fatoresEscolhaChart').getContext('2d');
-            new Chart(fatoresEscolhaCtx, {
+            createChart('fatoresEscolhaChart', {
                 type: 'bar',
                 data: {
                     labels: ['Resultados (Vestibular/ENEM)', 'Localização / Logística', 'Ser "Tradicional" (Referências)', 'Religiosidade / Valores', 'Proposta Pedagógica'],
-                    datasets: [{
-                        label: 'Peso na Decisão',
-                        data: [10, 9, 8, 7, 6],
-                        backgroundColor: ['#FB8C00', '#FBC02D', '#FFD54F', '#FFE082', '#FFECB3'],
-                    }]
+                    datasets: [{ label: 'Peso na Decisão', data: [10, 9, 8, 7, 6], backgroundColor: ['#FB8C00', '#FBC02D', '#FFD54F', '#FFE082', '#FFECB3'] }]
                 },
                 options: {
                     responsive: true, maintainAspectRatio: false, indexAxis: 'y',
                     scales: { x: { beginAtZero: true, title: { display: true, text: 'Peso Relativo (0-10)' } } },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { callbacks: { title: tooltipTitleCallback } },
-                        datalabels: { anchor: 'end', align: 'end', color: '#555', font: { weight: 'bold' } }
-                    }
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } }, datalabels: { anchor: 'end', align: 'end', color: '#555', font: { weight: 'bold' } } }
                 }
             });
 
-            // Radar Charts
             const radarOptions = {
                 responsive: true, maintainAspectRatio: false,
                 scales: { r: { beginAtZero: true, max: 10, pointLabels: { font: { size: 14 } }, ticks: { display: false } } },
                 plugins: { legend: { display: false }, datalabels: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } } }
             };
             
-            const paisRadarCtx = document.getElementById('paisRadarChart').getContext('2d');
-            new Chart(paisRadarCtx, {
+            createChart('paisRadarChart', {
                 type: 'radar',
-                data: {
-                    labels: ['Localização', 'Foco Vestibular', 'Acolhimento', 'Infraestrutura', 'Inovação'],
-                    datasets: [{
-                        label: 'Pais',
-                        data: [10, 10, 9, 8, 7],
-                        backgroundColor: 'rgba(76, 175, 80, 0.2)',
-                        borderColor: 'rgba(76, 175, 80, 1)',
-                        pointBackgroundColor: 'rgba(76, 175, 80, 1)',
-                    }]
-                },
+                data: { labels: ['Localização', 'Foco Vestibular', 'Acolhimento', 'Infraestrutura', 'Inovação'], datasets: [{ label: 'Pais', data: [10, 10, 9, 8, 7], backgroundColor: 'rgba(76, 175, 80, 0.2)', borderColor: 'rgba(76, 175, 80, 1)', pointBackgroundColor: 'rgba(76, 175, 80, 1)' }] },
                 options: radarOptions
             });
 
-            const alunosRadarCtx = document.getElementById('alunosRadarChart').getContext('2d');
-            new Chart(alunosRadarCtx, {
+            createChart('alunosRadarChart', {
                 type: 'radar',
-                data: {
-                    labels: ['Localização', 'Foco Vestibular', 'Acolhimento', 'Infraestrutura', 'Inovação'],
-                     datasets: [{
-                        label: 'Alunos',
-                        data: [8, 9, 7, 10, 6],
-                        backgroundColor: 'rgba(251, 140, 0, 0.2)',
-                        borderColor: 'rgba(251, 140, 0, 1)',
-                        pointBackgroundColor: 'rgba(251, 140, 0, 1)',
-                    }]
-                },
+                data: { labels: ['Localização', 'Foco Vestibular', 'Acolhimento', 'Infraestrutura', 'Inovação'], datasets: [{ label: 'Alunos', data: [8, 9, 7, 10, 6], backgroundColor: 'rgba(251, 140, 0, 0.2)', borderColor: 'rgba(251, 140, 0, 1)', pointBackgroundColor: 'rgba(251, 140, 0, 1)' }] },
                 options: radarOptions
             });
 
-            // Scatter Chart ENEM
-            const enemScatterCtx = document.getElementById('enemScatterChart').getContext('2d');
-            new Chart(enemScatterCtx, {
+            createChart('enemScatterChart', {
                 type: 'bubble',
                 data: {
                     datasets: [
-                    {
-                        label: 'Escolas Privadas',
-                        data: [
-                            { x: 724.10, y: 3850, r: 3850 / 150 + 5, label: 'WR' },
-                            { x: 703.67, y: 3850, r: 3850 / 150 + 5, label: 'Olimpo' },
-                            { x: 703.57, y: 3850, r: 3850 / 150 + 5, label: 'Arena' },
-                            { x: 691.48, y: 2930, r: 2930 / 150 + 5, label: 'COPE' },
-                            { x: 690.03, y: 1565, r: 1565 / 150 + 5, label: 'Santo Agostinho' },
-                            { x: 685.37, y: 3000, r: 3000 / 150 + 5, label: 'Simbios' },
-                            { x: 677.27, y: 2930, r: 2930 / 150 + 5, label: 'Agostiniano' },
-                            { x: 673.49, y: 2700, r: 2700 / 150 + 5, label: 'Marista' },
-                            { x: 672.65, y: 2979, r: 2979 / 150 + 5, label: 'Jaó' }
-                        ],
-                        backgroundColor: 'rgba(59, 130, 246, 0.7)'
-                    },
-                    {
-                        label: 'Rede SESI',
-                        data: [
-                            { x: 584.31, y: 927, r: 927 / 150 + 5, label: 'SESI Canaã' },
-                        ],
-                        backgroundColor: 'rgba(76, 175, 80, 0.8)'
-                    },
-                    {
-                        label: 'Projeção SESI Jardins',
-                        data: [
-                            { x: 680, y: 1625, r: 1625 / 150 + 5, label: 'Projeção SESI Jardins' }
-                        ],
-                        backgroundColor: 'rgba(129, 199, 132, 0.7)',
-                        borderColor: 'rgba(76, 175, 80, 1)',
-                        borderWidth: 3,
-                        borderDash: [6, 6]
-                    },
-                    {
-                        label: 'Rede Pública',
-                        data: [
-                            { x: 612.42, y: 0, r: 8, label: 'CEPAE/UFG' },
-                            { x: 592.68, y: 0, r: 8, label: 'C.M. Ayrton Senna' },
-                            { x: 592.05, y: 0, r: 8, label: 'IFG' },
-                            { x: 591.01, y: 0, r: 8, label: 'C.M. Vasco dos Reis' }
-                        ],
-                        backgroundColor: 'rgba(156, 163, 175, 0.7)'
-                    }
+                        { label: 'Escolas Privadas', data: [{ x: 724.10, y: 3850, r: 3850 / 150 + 5, label: 'WR' }, { x: 703.67, y: 3850, r: 3850 / 150 + 5, label: 'Olimpo' }, { x: 703.57, y: 3850, r: 3850 / 150 + 5, label: 'Arena' }, { x: 691.48, y: 2930, r: 2930 / 150 + 5, label: 'COPE' }, { x: 690.03, y: 1565, r: 1565 / 150 + 5, label: 'Santo Agostinho' }, { x: 685.37, y: 3000, r: 3000 / 150 + 5, label: 'Simbios' }, { x: 677.27, y: 2930, r: 2930 / 150 + 5, label: 'Agostiniano' }, { x: 673.49, y: 2700, r: 2700 / 150 + 5, label: 'Marista' }, { x: 672.65, y: 2979, r: 2979 / 150 + 5, label: 'Jaó' }], backgroundColor: 'rgba(59, 130, 246, 0.7)'},
+                        { label: 'Rede SESI', data: [{ x: 584.31, y: 927, r: 927 / 150 + 5, label: 'SESI Canaã' }], backgroundColor: 'rgba(76, 175, 80, 0.8)'},
+                        { label: 'Projeção SESI Jardins', data: [{ x: 680, y: 1625, r: 1625 / 150 + 5, label: 'Projeção SESI Jardins' }], backgroundColor: 'rgba(129, 199, 132, 0.7)', borderColor: 'rgba(76, 175, 80, 1)', borderWidth: 3, borderDash: [6, 6]},
+                        { label: 'Rede Pública', data: [{ x: 612.42, y: 0, r: 8, label: 'CEPAE/UFG' }, { x: 592.68, y: 0, r: 8, label: 'C.M. Ayrton Senna' }, { x: 592.05, y: 0, r: 8, label: 'IFG' }, { x: 591.01, y: 0, r: 8, label: 'C.M. Vasco dos Reis' }], backgroundColor: 'rgba(156, 163, 175, 0.7)'}
                     ]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: { title: { display: true, text: 'Nota Média ENEM 2024' } },
-                        y: { title: { display: true, text: 'Mensalidade 2025 (R$)' }, beginAtZero: true }
-                    },
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { x: { title: { display: true, text: 'Nota Média ENEM 2024' } }, y: { title: { display: true, text: 'Mensalidade 2025 (R$)' }, beginAtZero: true } },
                     plugins: {
-                        datalabels: {
-                             align: 'top',
-                             color: '#444',
-                             font: {
-                                 size: 10,
-                                 weight: 'bold'
-                             },
-                             formatter: function(value, context) {
-                                 return context.chart.data.datasets[context.datasetIndex].data[context.dataIndex].label;
-                             }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    const item = context.raw;
-                                    return [
-                                        item.label,
-                                        `Nota ENEM: ${item.x}`,
-                                        `Mensalidade: R$ ${item.y.toFixed(2)}`
-                                    ];
-                                }
-                            }
-                        },
-                        legend: {
-                            position: 'bottom'
-                        }
+                        datalabels: { align: 'top', color: '#444', font: { size: 10, weight: 'bold' }, formatter: (value, context) => context.chart.data.datasets[context.datasetIndex].data[context.dataIndex].label },
+                        tooltip: { callbacks: { label: (context) => { const item = context.raw; return [item.label, `Nota ENEM: ${item.x}`, `Mensalidade: R$ ${item.y.toFixed(2)}`]; } } },
+                        legend: { position: 'bottom' }
                     }
                 }
             });
-
-            // Viability Charts
-            const capacidadeCtx = document.getElementById('capacidadeChart')?.getContext('2d');
-            if (capacidadeCtx) {
-                new Chart(capacidadeCtx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Ensino Fundamental I', 'Ensino Fundamental II', 'Ensino Médio'],
-                        datasets: [{
-                            data: [450, 420, 480],
-                            backgroundColor: ['#4CAF50', '#81C784', '#A5D6A7'],
-                            borderColor: '#fff',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false, cutout: '60%',
-                        plugins: { legend: { position: 'bottom' }, datalabels: { color: 'white', font: { weight: 'bold', size: 16 } },
-                            tooltip: { callbacks: { title: tooltipTitleCallback } }
-                        }
-                    }
-                });
-            }
-
-            const custosCtx = document.getElementById('custosChart')?.getContext('2d');
-            if (custosCtx) {
-                new Chart(custosCtx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Custos Operacionais (Docentes)', 'Custos Administrativos'],
-                         datasets: [{
-                            data: [4907119.23, 3264684.97],
-                            backgroundColor: ['#00796B', '#4CAF50'],
-                            borderColor: '#fff',
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                         responsive: true, maintainAspectRatio: false, cutout: '60%',
-                        plugins: { legend: { position: 'bottom' }, datalabels: { formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => { sum += data; });
-                            let percentage = (value*100 / sum).toFixed(1)+"%";
-                            return percentage;
-                        }, color: '#fff', font: { weight: 'bold', size: 16 } },
-                            tooltip: { callbacks: { title: tooltipTitleCallback, label: (context) => `Valor: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed)}` } }
-                        }
-                    }
-                });
-            }
-
-            const receitaCtx = document.getElementById('receitaChart')?.getContext('2d');
-            if(receitaCtx) {
-                new Chart(receitaCtx, {
-                    type: 'bar',
-                     data: {
-                        labels: ['Ano 1', 'Ano 2', 'Ano 3', 'Ano 4', 'Ano 5'],
-                         datasets: [
-                            {
-                                label: 'Receita Anual (R$)',
-                                data: [6821100, 10748400, 12269712, 13005894, 13786248],
-                                backgroundColor: '#4CAF50',
-                                order: 1
-                            },
-                            {
-                                label: 'Custo Total Anual (R$)',
-                                data: [4292301.02, 5571355.98, 7204747.03, 7673055.59, 8171804.20],
-                                backgroundColor: 'rgba(251, 140, 0, 0.8)',
-                                type: 'line',
-                                order: 0,
-                                borderColor: 'rgba(251, 140, 0, 1)',
-                                borderWidth: 3,
-                                pointBackgroundColor: 'rgba(251, 140, 0, 1)',
-                                pointRadius: 5
-                            }
-                        ]
-                    },
-                    options: {
-                         responsive: true, maintainAspectRatio: false,
-                        scales: { y: { beginAtZero: true, ticks: { callback: (value) => `R$ ${(value / 1e6).toFixed(1)}M` } } },
-                        plugins: { legend: { position: 'bottom' },
-                            datalabels: { display: false },
-                            tooltip: { callbacks: { title: tooltipTitleCallback,  label: (context) => `${context.dataset.label}: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y)}` } }
-                        }
-                    }
-                });
-            }
             
-            const matriculasComparativoCtx = document.getElementById('matriculasComparativoChart')?.getContext('2d');
-            if (matriculasComparativoCtx) {
-                new Chart(matriculasComparativoCtx, {
+            function createViabilityCharts() {
+                createChart('capacidadeChart', {
+                    type: 'doughnut',
+                    data: { labels: ['Ensino Fundamental I', 'Ensino Fundamental II', 'Ensino Médio'], datasets: [{ data: [450, 420, 480], backgroundColor: ['#4CAF50', '#81C784', '#A5D6A7'], borderColor: '#fff', borderWidth: 2 }] },
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'bottom' }, datalabels: { color: 'white', font: { weight: 'bold', size: 16 } }, tooltip: { callbacks: { title: tooltipTitleCallback } } } }
+                });
+
+                createChart('custosChart', {
+                    type: 'doughnut',
+                    data: { labels: ['Custos Operacionais (Docentes)', 'Custos Administrativos'], datasets: [{ data: [4907119.23, 3264684.97], backgroundColor: ['#00796B', '#4CAF50'], borderColor: '#fff', borderWidth: 2 }] },
+                    options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'bottom' }, datalabels: { formatter: (value, ctx) => { let sum = 0; ctx.chart.data.datasets[0].data.map(data => { sum += data; }); return (value*100 / sum).toFixed(1)+"%"; }, color: '#fff', font: { weight: 'bold', size: 16 } }, tooltip: { callbacks: { title: tooltipTitleCallback, label: (context) => `Valor: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed)}` } } } }
+                });
+
+                createChart('receitaChart', {
                     type: 'bar',
-                    data: {
-                        labels: ['Colorado 2020', 'Colorado 2021', 'Colorado 2022', 'Colorado 2023', 'Colorado 2024', 'Colorado 2025', 'Mineiros 2025', 'Luziânia 2025'],
-                        datasets: [{
-                            label: 'Matrículas',
-                            data: [225, 299, 480, 666, 734, 783, 257, 696],
-                            backgroundColor: ['#0d47a1', '#1565c0', '#1976d2', '#1e88e5', '#2196f3', '#42a5f5', '#f9a825', '#4caf50'],
-                            yAxisID: 'y'
-                        }, {
-                            label: 'Resultado Operacional (Colorado)',
-                            data: [-194506, -324694, 253329, 1027077, 1890496, 2234605, null, null],
-                            type: 'line',
-                            borderColor: '#d32f2f',
-                            backgroundColor: '#ef5350',
-                            yAxisID: 'y1',
-                            tension: 0.1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            y: {
-                                type: 'linear',
-                                display: true,
-                                position: 'left',
-                                title: { display: true, text: 'Nº de Matrículas' }
-                            },
-                            y1: {
-                                type: 'linear',
-                                display: true,
-                                position: 'right',
-                                title: { display: true, text: 'Resultado Operacional (R$)' },
-                                grid: { drawOnChartArea: false },
-                                ticks: { callback: (value) => `R$ ${(value/1000).toFixed(0)}k` }
-                            }
-                        },
-                        plugins: {
-                            datalabels: {
-                                anchor: 'end',
-                                align: 'top',
-                                color: '#333',
-                                font: { weight: 'bold' },
-                                formatter: (value, context) => {
-                                     if (context.dataset.label === 'Matrículas') return value;
-                                     return null;
-                                }
-                            },
-                            tooltip: { callbacks: { title: tooltipTitleCallback,  label: (context) => `${context.dataset.label}: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y)}` } }
-                        }
-                    }
+                    data: { labels: ['Ano 1', 'Ano 2', 'Ano 3', 'Ano 4', 'Ano 5'], datasets: [ { label: 'Receita Anual (R$)', data: [6821100, 10748400, 12269712, 13005894, 13786248], backgroundColor: '#4CAF50', order: 1 }, { label: 'Custo Total Anual (R$)', data: [4292301.02, 5571355.98, 7204747.03, 7673055.59, 8171804.20], backgroundColor: 'rgba(251, 140, 0, 0.8)', type: 'line', order: 0, borderColor: 'rgba(251, 140, 0, 1)', borderWidth: 3, pointBackgroundColor: 'rgba(251, 140, 0, 1)', pointRadius: 5 } ] },
+                    options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, ticks: { callback: (value) => `R$ ${(value / 1e6).toFixed(1)}M` } } }, plugins: { legend: { position: 'bottom' }, datalabels: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback,  label: (context) => `${context.dataset.label}: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y)}` } } } }
                 });
             }
-        });
 
+            // Modal Logic
+            const analysisData = {
+                demanda: { title: 'Análise da Demanda Educacional', content: `<p>A construção da escola é uma resposta direta a um cenário de alta procura por educação de qualidade. As escolas existentes na região operam acima da capacidade, resultando em salas superlotadas e comprometimento da qualidade do ensino.</p><p>O dado de que as matrículas na rede privada cresceram 31% enquanto a pública decresceu 8% (entre 2007 e 2019) indica uma busca ativa das famílias por novos modelos de aprendizagem. Adicionalmente, a localização na região leste de Goiânia, uma área com poucas opções de escolas, torna o projeto crucial para garantir o acesso à educação, reduzindo a necessidade de longos deslocamentos para os estudantes e fortalecendo a comunidade local.</p>` },
+                industria: { title: 'Análise do Apoio à Indústria', content: `<p>O projeto está intrinsecamente alinhado à missão do SESI de apoiar o desenvolvimento industrial. A escola foi concebida para atender prioritariamente os dependentes dos colaboradores das indústrias goianas, que representam um público estimado de 35% do corpo discente.</p><p>Esta iniciativa é um investimento direto no capital humano, o ativo mais valioso da indústria. Ao oferecer educação de excelência, a Escola SESI Jardins contribui para a retenção de talentos e forma uma nova geração de profissionais qualificados, com as competências necessárias para impulsionar a produtividade e a inovação no futuro do trabalho em Goiás.</p>` },
+                investimento: { title: 'Análise do Investimento', content: `<p>O investimento total de R$ 131,4 milhões está distribuído de forma a garantir uma infraestrutura robusta e um ambiente de aprendizado moderno. A maior parcela, de <strong>R$ 98,1 milhões</strong>, é destinada à construção, cobrindo desde a terraplanagem até acabamentos complexos como climatização, acústica e acessibilidade.</p><p>Um montante combinado de aproximadamente <strong>R$ 27 milhões</strong> para mobiliário e equipamentos demonstra o compromisso com a tecnologia e o conforto. Por fim, os <strong>R$ 6,2 milhões</strong> em despesas pré-operacionais, que incluem desde os projetos de engenharia até as campanhas de marketing, asseguram que a escola seja lançada de forma planejada e estratégica, garantindo sua visibilidade e a captação de alunos desde o início.</p>` },
+                aprovam: { title: 'Análise dos Pontos de Aprovação', content: `<p>A pesquisa revela uma distinção clara nas prioridades de pais e alunos. Para os pais, o fator de maior intensidade é o <strong>acolhimento individualizado</strong>. Eles valorizam a atenção que a instituição oferece, o reconhecimento das dificuldades e aptidões de cada estudante e a vigilância sobre os espaços de sociabilidade. Em segundo plano, a clareza nos critérios de avaliação também é apreciada.</p><p>Para os alunos, o aspecto mais valorizado é a <strong>estrutura física</strong>, com preferência por espaços abertos e amplos, em contraste com ambientes que descrevem como "confinados" ou "claustrofóbicos". O suporte acadêmico, como plantões de dúvidas no contraturno, também é um ponto positivo, embora com menor intensidade.</p>` },
+                desaprovam: { title: 'Análise dos Pontos de Desaprovação', content: `<p>As frustrações também seguem linhas distintas. Os pais apontam a <strong>desorganização burocrática</strong> como o principal problema, citando falhas na comunicação de informativos e na gestão de notas e mensalidades. Essa desorganização é um fator tão crítico que alguns participantes relataram ter mudado de escola por esse motivo.</p><p>Já os alunos reclamam com mais intensidade dos <strong>espaços fechados e pequenos</strong>, que geram uma sensação de confinamento e prejudicam o bem-estar. A repetitividade das atividades acadêmicas, com longas listas de exercícios, é outro ponto de insatisfação, visto como monótono e desmotivador.</p>` },
+                marca: { title: 'Análise da Percepção da Marca SESI', content: `<p>A marca SESI possui uma imagem geral positiva e é conhecida em Goiânia, mas de forma superficial e frequentemente associada a experiências passadas ligadas a lazer (clube), cultura (teatro) e convênios. Existe um <strong>distanciamento</strong> da marca no dia a dia do público-alvo (Classes A/B).</p><p>A principal barreira é a percepção de que o SESI atende a um público com perfil socioeconômico diferente e é focado em <strong>ensino técnico ou profissionalizante</strong>, uma confusão comum com o SENAI. Essa percepção faz com que, inicialmente, o SESI não seja considerado uma opção de escola para os filhos desse público, cujas expectativas estão alinhadas com o ensino tradicional e a aprovação em vestibulares de carreiras como Medicina e Direito.</p>` },
+                escolha: { title: 'Análise dos Fatores de Escolha', content: `<p>A pesquisa com pais e professores de escolas particulares de Goiânia mostra que, embora a proposta pedagógica seja mencionada, a decisão final é fortemente influenciada por fatores pragmáticos. O critério de maior peso é o <strong>histórico de resultados em vestibulares e no ENEM</strong>, seguido de perto pela <strong>localização e logística</strong>, que facilitam a rotina familiar.</p><p>O conceito de escola "tradicional", que implica em ser uma instituição conhecida, com boas referências e, em alguns casos, com valores religiosos alinhados aos da família, também tem grande importância. Isso indica um mercado com certo conservadorismo, onde a segurança de um método comprovado muitas vezes se sobrepõe à busca por inovação.</p>` },
+                ideal: { title: 'Análise do Perfil da Escola Ideal', content: `<p>O cruzamento das pesquisas revela que o perfil da escola ideal difere sutilmente entre pais e alunos. Para os <strong>pais</strong>, a escola perfeita combina o pragmatismo da <strong>localização</strong> conveniente e a segurança dos <strong>resultados no vestibular</strong> com o cuidado emocional do <strong>acolhimento</strong>. A infraestrutura e a inovação são importantes, mas secundárias a essa base.</p><p>Para os <strong>alunos</strong>, a experiência física é primordial: a <strong>infraestrutura</strong> ampla e moderna é o fator de maior peso. O foco em <strong>resultados</strong> também é crucial, pois afeta diretamente seu futuro. A localização é valorizada pela conveniência, mas o acolhimento e a inovação, embora desejáveis, têm um peso ligeiramente menor em sua decisão.</p>` },
+                migracao: { title: 'Análise dos Fatores de Migração', content: `<p>A decisão de mudar de escola é complexa e envolve uma análise de risco versus recompensa. As <strong>barreiras</strong> são predominantemente emocionais e conservadoras: o medo de abandonar um modelo de ensino "seguro" e focado no vestibular, a falta de referências do SESI nesse segmento e a percepção equivocada da marca.</p><p>Em contrapartida, os <strong>atratores</strong> são concretos e poderosos. A <strong>localização</strong> resolve um grande problema logístico para as famílias da região. A <strong>infraestrutura</strong> superior cria um desejo e atende a uma demanda não suprida. O desafio da Escola SESI Jardins é usar esses atratores tangíveis para superar as barreiras intangíveis, comunicando que a inovação não exclui a tradição de resultados e que a marca SESI está se reposicionando para liderar a educação de ponta em Goiás.</p>` },
+                correlacao: { title: 'Análise da Correlação Mensalidade vs. ENEM', content: `<p>O gráfico de dispersão demonstra uma tendência clara no mercado de Goiânia: escolas com maior desempenho no ENEM geralmente praticam mensalidades mais altas. As escolas no topo do ranking, com notas acima de 700 pontos, concentram-se na faixa de mensalidades entre R$ 3.000 e R$ 4.000.</p><p>A projeção para a <strong>Escola SESI Jardins</strong> é estrategicamente vantajosa. Com uma nota de ENEM projetada em 680 (competitiva com as melhores escolas) e uma mensalidade sugerida de R$ 1.625, ela se posiciona como uma opção de <strong>alto valor agregado</strong>. Ela oferece um desempenho educacional que rivaliza com instituições de custo significativamente maior, preenchendo uma lacuna no mercado para famílias que buscam excelência acadêmica com um melhor custo-benefício.</p>` },
+                viabilidade: { title: 'Análise Detalhada da Viabilidade do Projeto', content: `<h4 class="font-bold text-lg">Passo 1: O Ponto de Partida: A Capacidade de Alunos Define o Potencial</h4><p>A fundação de todo o planejamento é a sua Capacidade de Alunos. Este número não é apenas uma meta, mas o pilar que sustenta todas as decisões. Ele define o teto da receita (não se pode faturar sobre matrículas inexistentes) e dimensiona toda a estrutura de custos, desde o tamanho das salas até a quantidade de professores. Ao definir a capacidade, o projeto estabelece sua escala.</p><h4 class="font-bold text-lg mt-4">Passo 2: O Custo da Operação: Do Planejamento aos Gastos Reais</h4><p>Os Custos são o combustível do projeto e uma consequência direta da escala definida. Eles se dividem em Custos Operacionais (salários de professores, material didático) e Custos Administrativos (gestão, marketing, suporte). Para atender a capacidade de alunos planejada, a escola incorrerá em custos proporcionais para garantir uma operação de qualidade.</p><h4 class="font-bold text-lg mt-4">Passo 3: A Geração de Valor: Como se Projeta a Receita</h4><p>A Projeção de Receitas torna o projeto sustentável. Ela parte da definição de uma Referência de Mensalidade (o preço do serviço) e de uma Projeção de Matrículas conservadora (o número realista de alunos esperados). A receita total é o produto desses dois fatores. O planejamento granular, por ano/série, demonstra uma análise detalhada e precisa da saúde financeira.</p><h4 class="font-bold text-lg mt-4">Passo 4: A Síntese: A Lógica da Viabilidade do Projeto</h4><p>A viabilidade é a convergência de todas as etapas. A análise final compara a Receita Projetada com os Custos Projetados. Um resultado positivo, especialmente partindo de premissas conservadoras, não apenas valida a sustentabilidade do projeto, mas confirma que ele é capaz de atingir os objetivos financeiros estabelecidos, dando o "sinal verde" para sua execução.</p>` }
+            };
 
-        // Modal Logic
-        const analysisData = {
-            demanda: {
-                title: 'Análise da Demanda Educacional',
-                content: `<p>A construção da escola é uma resposta direta a um cenário de alta procura por educação de qualidade. As escolas existentes na região operam acima da capacidade, resultando em salas superlotadas e comprometimento da qualidade do ensino.</p>
-                          <p>O dado de que as matrículas na rede privada cresceram 31% enquanto a pública decresceu 8% (entre 2007 e 2019) indica uma busca ativa das famílias por novos modelos de aprendizagem. Adicionalmente, a localização na região leste de Goiânia, uma área com poucas opções de escolas, torna o projeto crucial para garantir o acesso à educação, reduzindo a necessidade de longos deslocamentos para os estudantes e fortalecendo a comunidade local.</p>`
-            },
-            industria: {
-                title: 'Análise do Apoio à Indústria',
-                content: `<p>O projeto está intrinsecamente alinhado à missão do SESI de apoiar o desenvolvimento industrial. A escola foi concebida para atender prioritariamente os dependentes dos colaboradores das indústrias goianas, que representam um público estimado de 35% do corpo discente.</p>
-                          <p>Esta iniciativa é um investimento direto no capital humano, o ativo mais valioso da indústria. Ao oferecer educação de excelência, a Escola SESI Jardins contribui para a retenção de talentos e forma uma nova geração de profissionais qualificados, com as competências necessárias para impulsionar a produtividade e a inovação no futuro do trabalho em Goiás.</p>`
-            },
-            investimento: {
-                title: 'Análise do Investimento',
-                content: `<p>O investimento total de R$ 131,4 milhões está distribuído de forma a garantir uma infraestrutura robusta e um ambiente de aprendizado moderno. A maior parcela, de <strong>R$ 98,1 milhões</strong>, é destinada à construção, cobrindo desde a terraplanagem até acabamentos complexos como climatização, acústica e acessibilidade.</p>
-                          <p>Um montante combinado de aproximadamente <strong>R$ 27 milhões</strong> para mobiliário e equipamentos demonstra o compromisso com a tecnologia e o conforto. Por fim, os <strong>R$ 6,2 milhões</strong> em despesas pré-operacionais, que incluem desde os projetos de engenharia até as campanhas de marketing, asseguram que a escola seja lançada de forma planejada e estratégica, garantindo sua visibilidade e a captação de alunos desde o início.</p>`
-            },
-            aprovam: {
-                title: 'Análise dos Pontos de Aprovação',
-                content: `<p>A pesquisa revela uma distinção clara nas prioridades de pais e alunos. Para os pais, o fator de maior intensidade é o <strong>acolhimento individualizado</strong>. Eles valorizam a atenção que a instituição oferece, o reconhecimento das dificuldades e aptidões de cada estudante e a vigilância sobre os espaços de sociabilidade. Em segundo plano, a clareza nos critérios de avaliação também é apreciada.</p>
-                          <p>Para os alunos, o aspecto mais valorizado é a <strong>estrutura física</strong>, com preferência por espaços abertos e amplos, em contraste com ambientes que descrevem como "confinados" ou "claustrofóbicos". O suporte acadêmico, como plantões de dúvidas no contraturno, também é um ponto positivo, embora com menor intensidade.</p>`
-            },
-            desaprovam: {
-                title: 'Análise dos Pontos de Desaprovação',
-                content: `<p>As frustrações também seguem linhas distintas. Os pais apontam a <strong>desorganização burocrática</strong> como o principal problema, citando falhas na comunicação de informativos e na gestão de notas e mensalidades. Essa desorganização é um fator tão crítico que alguns participantes relataram ter mudado de escola por esse motivo.</p>
-                          <p>Já os alunos reclamam com mais intensidade dos <strong>espaços fechados e pequenos</strong>, que geram uma sensação de confinamento e prejudicam o bem-estar. A repetitividade das atividades acadêmicas, com longas listas de exercícios, é outro ponto de insatisfação, visto como monótono e desmotivador.</p>`
-            },
-            marca: {
-                title: 'Análise da Percepção da Marca SESI',
-                content: `<p>A marca SESI possui uma imagem geral positiva e é conhecida em Goiânia, mas de forma superficial e frequentemente associada a experiências passadas ligadas a lazer (clube), cultura (teatro) e convênios. Existe um <strong>distanciamento</strong> da marca no dia a dia do público-alvo (Classes A/B).</p>
-                          <p>A principal barreira é a percepção de que o SESI atende a um público com perfil socioeconômico diferente e é focado em <strong>ensino técnico ou profissionalizante</strong>, uma confusão comum com o SENAI. Essa percepção faz com que, inicialmente, o SESI não seja considerado uma opção de escola para os filhos desse público, cujas expectativas estão alinhadas com o ensino tradicional e a aprovação em vestibulares de carreiras como Medicina e Direito.</p>`
-            },
-            escolha: {
-                title: 'Análise dos Fatores de Escolha',
-                content: `<p>A pesquisa com pais e professores de escolas particulares de Goiânia mostra que, embora a proposta pedagógica seja mencionada, a decisão final é fortemente influenciada por fatores pragmáticos. O critério de maior peso é o <strong>histórico de resultados em vestibulares e no ENEM</strong>, seguido de perto pela <strong>localização e logística</strong>, que facilitam a rotina familiar.</p>
-                          <p>O conceito de escola "tradicional", que implica em ser uma instituição conhecida, com boas referências e, em alguns casos, com valores religiosos alinhados aos da família, também tem grande importância. Isso indica um mercado com certo conservadorismo, onde a segurança de um método comprovado muitas vezes se sobrepõe à busca por inovação.</p>`
-            },
-             ideal: {
-                title: 'Análise do Perfil da Escola Ideal',
-                content: `<p>O cruzamento das pesquisas revela que o perfil da escola ideal difere sutilmente entre pais e alunos. Para os <strong>pais</strong>, a escola perfeita combina o pragmatismo da <strong>localização</strong> conveniente e a segurança dos <strong>resultados no vestibular</strong> com o cuidado emocional do <strong>acolhimento</strong>. A infraestrutura e a inovação são importantes, mas secundárias a essa base.</p>
-                          <p>Para os <strong>alunos</strong>, a experiência física é primordial: a <strong>infraestrutura</strong> ampla e moderna é o fator de maior peso. O foco em <strong>resultados</strong> também é crucial, pois afeta diretamente seu futuro. A localização é valorizada pela conveniência, mas o acolhimento e a inovação, embora desejáveis, têm um peso ligeiramente menor em sua decisão.</p>`
-            },
-             migracao: {
-                title: 'Análise dos Fatores de Migração',
-                content: `<p>A decisão de mudar de escola é complexa e envolve uma análise de risco versus recompensa. As <strong>barreiras</strong> são predominantemente emocionais e conservadoras: o medo de abandonar um modelo de ensino "seguro" e focado no vestibular, a falta de referências do SESI nesse segmento e a percepção equivocada da marca.</p>
-                          <p>Em contrapartida, os <strong>atratores</strong> são concretos e poderosos. A <strong>localização</strong> resolve um grande problema logístico para as famílias da região. A <strong>infraestrutura</strong> superior cria um desejo e atende a uma demanda não suprida. O desafio da Escola SESI Jardins é usar esses atratores tangíveis para superar as barreiras intangíveis, comunicando que a inovação não exclui a tradição de resultados e que a marca SESI está se reposicionando para liderar a educação de ponta em Goiás.</p>`
-            },
-            correlacao: {
-                title: 'Análise da Correlação Mensalidade vs. ENEM',
-                content: `<p>O gráfico de dispersão demonstra uma tendência clara no mercado de Goiânia: escolas com maior desempenho no ENEM geralmente praticam mensalidades mais altas. As escolas no topo do ranking, com notas acima de 700 pontos, concentram-se na faixa de mensalidades entre R$ 3.000 e R$ 4.000.</p>
-                          <p>A projeção para a <strong>Escola SESI Jardins</strong> é estrategicamente vantajosa. Com uma nota de ENEM projetada em 680 (competitiva com as melhores escolas) e uma mensalidade sugerida de R$ 1.625, ela se posiciona como uma opção de <strong>alto valor agregado</strong>. Ela oferece um desempenho educacional que rivaliza com instituições de custo significativamente maior, preenchendo uma lacuna no mercado para famílias que buscam excelência acadêmica com um melhor custo-benefício.</p>`
-            },
-            viabilidade: {
-                 title: 'Análise Detalhada da Viabilidade do Projeto',
-                content: `<h4 class="font-bold text-lg">Passo 1: O Ponto de Partida: A Capacidade de Alunos Define o Potencial</h4>
-                        <p>A fundação de todo o planejamento é a sua Capacidade de Alunos. Este número não é apenas uma meta, mas o pilar que sustenta todas as decisões. Ele define o teto da receita (não se pode faturar sobre matrículas inexistentes) e dimensiona toda a estrutura de custos, desde o tamanho das salas até a quantidade de professores. Ao definir a capacidade, o projeto estabelece sua escala.</p>
-                        <h4 class="font-bold text-lg mt-4">Passo 2: O Custo da Operação: Do Planejamento aos Gastos Reais</h4>
-                        <p>Os Custos são o combustível do projeto e uma consequência direta da escala definida. Eles se dividem em Custos Operacionais (salários de professores, material didático) e Custos Administrativos (gestão, marketing, suporte). Para atender a capacidade de alunos planejada, a escola incorrerá em custos proporcionais para garantir uma operação de qualidade.</p>
-                        <h4 class="font-bold text-lg mt-4">Passo 3: A Geração de Valor: Como se Projeta a Receita</h4>
-                        <p>A Projeção de Receitas torna o projeto sustentável. Ela parte da definição de uma Referência de Mensalidade (o preço do serviço) e de uma Projeção de Matrículas conservadora (o número realista de alunos esperados). A receita total é o produto desses dois fatores. O planejamento granular, por ano/série, demonstra uma análise detalhada e precisa da saúde financeira.</p>
-                         <h4 class="font-bold text-lg mt-4">Passo 4: A Síntese: A Lógica da Viabilidade do Projeto</h4>
-                        <p>A viabilidade é a convergência de todas as etapas. A análise final compara a Receita Projetada com os Custos Projetados. Um resultado positivo, especialmente partindo de premissas conservadoras, não apenas valida a sustentabilidade do projeto, mas confirma que ele é capaz de atingir os objetivos financeiros estabelecidos, dando o "sinal verde" para sua execução.</p>`
-            }
-        };
+            const modal = document.getElementById('analysis-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const analysisButtons = document.querySelectorAll('.analysis-button');
 
-        const modal = document.getElementById('analysis-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalContent = document.getElementById('modal-content');
-        const closeModalButton = document.getElementById('close-modal-button');
-        const analysisButtons = document.querySelectorAll('.analysis-button');
+            analysisButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const key = button.getAttribute('data-analysis-key');
+                    const data = analysisData[key];
+                    if (data) {
+                        modalTitle.textContent = data.title;
+                        modalContent.innerHTML = data.content;
+                        modal.classList.remove('hidden');
+                    }
+                });
+            });
 
-        analysisButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const key = button.getAttribute('data-analysis-key');
-                const data = analysisData[key];
-                if (data) {
-                    modalTitle.textContent = data.title;
-                    modalContent.innerHTML = data.content;
-                    modal.classList.remove('hidden');
+            const closeModal = () => {
+                modal.classList.add('hidden');
+            };
+
+            closeModalButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
                 }
             });
-        });
-
-        const closeModal = () => {
-            modal.classList.add('hidden');
-        };
-
-        closeModalButton.addEventListener('click', closeModal);
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-        
-        // Viability section interactivity
-        const viabilityNav = document.getElementById('viability-nav');
-        const viabilityContentPanels = document.querySelectorAll('.viability-content-panel');
-
-        viabilityNav.addEventListener('click', (e) => {
-            const targetButton = e.target.closest('.viability-btn');
-            if (!targetButton) return;
-
-            viabilityNav.querySelectorAll('.viability-btn').forEach(btn => btn.classList.remove('active'));
-            targetButton.classList.add('active');
             
-            const contentId = targetButton.dataset.content;
+            // Viability section interactivity
+            const viabilityNav = document.getElementById('viability-nav');
+            const viabilityContentPanels = document.querySelectorAll('.viability-content-panel');
 
-            viabilityContentPanels.forEach(panel => {
-                if (panel.id === `content-${contentId}`) {
-                    panel.classList.remove('hidden');
+            viabilityNav.addEventListener('click', (e) => {
+                const targetButton = e.target.closest('.viability-btn');
+                if (!targetButton) return;
+
+                viabilityNav.querySelectorAll('.viability-btn').forEach(btn => btn.classList.remove('active'));
+                targetButton.classList.add('active');
+                
+                const contentId = targetButton.dataset.content;
+
+                viabilityContentPanels.forEach(panel => {
+                    if (panel.id === `content-${contentId}`) {
+                        panel.classList.remove('hidden');
+                    } else {
+                        panel.classList.add('hidden');
+                    }
+                });
+                
+                // Ensure charts are created only when the tab is active
+                if(contentId === 'capacidade' || contentId === 'custos' || contentId === 'receitas') {
+                    createViabilityCharts();
+                }
+            });
+
+            // Initially create charts for the active tab if it's a chart tab
+            if (viabilityNav.querySelector('.viability-btn.active')?.dataset.content.match(/capacidade|custos|receitas/)) {
+                createViabilityCharts();
+            }
+
+            // Payback Simulator Logic
+            const inputs = ['investimento', 'contrapartida', 'mensalidade', 'alunos', 'custoAluno', 'tma'];
+            const elements = {};
+            inputs.forEach(id => elements[id] = document.getElementById(id));
+
+            const receitaAnualEl = document.getElementById('receita-anual');
+            const custoAnualEl = document.getElementById('custo-anual');
+            const lucroAnualEl = document.getElementById('lucro-anual');
+            const vplEl = document.getElementById('vpl-resultado');
+            const paybackAnosEl = document.getElementById('payback-anos');
+            const paybackMarkerEl = document.getElementById('payback-marker');
+            const paybackLabelEl = document.getElementById('payback-label');
+            const analiseInterativaEl = document.getElementById('analise-interativa');
+
+            function formatCurrency(value) {
+                return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            }
+
+            function calculatePayback() {
+                const investimento = parseFloat(elements.investimento.value) || 0;
+                const contrapartida = parseFloat(elements.contrapartida.value) || 0;
+                const mensalidade = parseFloat(elements.mensalidade.value) || 0;
+                const alunos = parseFloat(elements.alunos.value) || 0;
+                const custoAluno = parseFloat(elements.custoAluno.value) || 0;
+                const tma = (parseFloat(elements.tma.value) || 0) / 100;
+
+                const investimentoLiquido = investimento - contrapartida;
+                const receitaAnual = alunos * mensalidade * 12;
+                const custoAnual = alunos * custoAluno * 12;
+                const lucroAnual = receitaAnual - custoAnual;
+                
+                let vpl = 0;
+                const projectionYears = 10;
+                if (lucroAnual > 0 && tma >= 0) {
+                    for (let i = 1; i <= projectionYears; i++) {
+                        vpl += lucroAnual / Math.pow((1 + tma), i);
+                    }
+                }
+                vpl -= investimentoLiquido;
+
+
+                receitaAnualEl.textContent = formatCurrency(receitaAnual);
+                custoAnualEl.textContent = formatCurrency(custoAnual);
+                lucroAnualEl.textContent = formatCurrency(lucroAnual);
+                vplEl.textContent = formatCurrency(vpl);
+
+                let payback = Infinity;
+                if (lucroAnual > 0) {
+                    payback = investimentoLiquido / lucroAnual;
+                    paybackAnosEl.textContent = payback.toFixed(1);
+                    const markerPosition = Math.min(payback / 25, 1) * 100;
+                    paybackMarkerEl.style.left = `${markerPosition}%`;
+                    paybackLabelEl.textContent = `${payback.toFixed(1)} anos`;
                 } else {
-                    panel.classList.add('hidden');
+                    paybackAnosEl.textContent = 'N/A';
+                    paybackMarkerEl.style.left = '100%';
+                    paybackLabelEl.textContent = `Inválido`;
                 }
-            });
-        });
 
+                if (vpl > 0) {
+                    analiseInterativaEl.innerHTML = `O projeto é <strong class="text-green-600">economicamente viável</strong>, pois o Valor Presente Líquido (VPL) é positivo, superando a Taxa Mínima de Atratividade de ${elements.tma.value}%. O retorno do investimento é estimado em ${payback.toFixed(1)} anos.`;
+                } else {
+                     analiseInterativaEl.innerHTML = `O projeto <strong class="text-red-600">não é economicamente viável</strong> com os parâmetros atuais. O Valor Presente Líquido (VPL) é negativo, indicando que o retorno não supera a Taxa Mínima de Atratividade de ${elements.tma.value}%.`;
+                }
+            }
+
+            inputs.forEach(id => {
+                elements[id].addEventListener('input', calculatePayback);
+            });
+            
+            paybackMarkerEl.addEventListener('mouseover', () => paybackLabelEl.classList.remove('opacity-0'));
+            paybackMarkerEl.addEventListener('mouseout', () => paybackLabelEl.classList.add('opacity-0'));
+
+
+            calculatePayback();
+        });
 
     </script>
 </body>
